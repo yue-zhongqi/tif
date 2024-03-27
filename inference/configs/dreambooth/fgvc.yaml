@@ -1,0 +1,21 @@
+# ------ Basic Config ------
+dataset: 'fgvc'
+train_epochs: 0
+
+interpolation: 'bicubic'
+img_size: 512
+dtype: 'float16'
+
+n_samples: [20, 50, 100, 500]
+to_keep: [20, 10, 5, 1]
+n_trials: 1
+batch_size: 32
+loss: 'l2'
+
+### dreambooth lora config
+version: '2-0'
+unet_lora_scale: 0.6
+text_lora_scale: 0.7
+
+# 64, 128, 256, 512 = 64,128,256,64
+# 64, 64, 128, 512 = 64,0,... (Error)

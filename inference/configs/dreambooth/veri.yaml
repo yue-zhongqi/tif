@@ -1,0 +1,18 @@
+# ------ Basic Config ------
+dataset: 'veri'
+train_epochs: 0
+
+interpolation: 'bicubic'
+img_size: 512
+dtype: 'float16'
+
+n_samples: [32, 128, 256, 500]
+to_keep: [50, 20, 5, 1]
+n_trials: 1
+batch_size: 32
+loss: 'l2'
+
+### dreambooth lora config
+version: '2-0'
+unet_lora_scale: 0.6
+text_lora_scale: 0.7
